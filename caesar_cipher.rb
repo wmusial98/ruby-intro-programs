@@ -2,11 +2,7 @@ def iterator_check (iter, low_range, high_range)
   if (low_range..high_range).include?(iter)
     iter
   else
-    if iter > high_range
-      iter -= 26
-    else 
-      iter += 26
-    end
+    iter > high_range ? iter -= 26 : iter += 26
   end
 end
 
